@@ -19,7 +19,7 @@
         {
           "id": "catppuccinPaletteSidebar-view",
           "title": "Catppuccin Palette",
-          "icon": "media/icon.svg"
+          "icon": "media/icon3.png"
         }
       ]
     },
@@ -29,7 +29,7 @@
           "type": "webview",
           "id": "catppuccinPaletteSidebar",
           "name": "Catppuccin Palette",
-          "icon": "media/icon.svg",
+          "icon": "media/icon3.png",
           "contextualTitle": "Catppuccin Palette 🎨"
         }
       ]
@@ -51,7 +51,8 @@
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
-    "test": "vscode-test"
+    "test": "vscode-test",
+    "build": "cd webview-ui && npm run build && cd .."
   },
   "devDependencies": {
     "@types/vscode": "^1.102.0",
