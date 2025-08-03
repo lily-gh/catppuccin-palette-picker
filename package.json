@@ -9,13 +9,39 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onView:catppuccinPaletteSidebar"
+  ],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "catppuccinPaletteSidebar-view",
+          "title": "Catppuccin Palette",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "catppuccinPaletteSidebar-view": [
+        {
+          "type": "webview",
+          "id": "catppuccinPaletteSidebar",
+          "name": "Catppuccin Palette",
+          "icon": "media/icon.svg",
+          "contextualTitle": "Catppuccin Palette 🎨"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "catppuccin-palette.activateCatppuccinPalette",
+        "command": "catppuccinPalette.activateCatppuccinPalette",
         "title": "Catppuccin Palette"
+      },
+      {
+        "command": "catppuccinPalette.openCatppuccinPalette",
+        "title": "Catppuccin Palette - open"
       }
     ]
   },
