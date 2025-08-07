@@ -6,12 +6,9 @@
 
 <main>
   <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+    <div class="p-4 bg-pink-500 text-white rounded">
+  If you can read this, Tailwind is working 🎉
+</div>
   </div>
   <h1>Vite + Svelte</h1>
 
