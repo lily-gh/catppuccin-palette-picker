@@ -15,11 +15,11 @@ export function activate(context: vscode.ExtensionContext) {
     // Register a webview view provider for the sidebar
     vscode.window.registerWebviewViewProvider(
       'catppuccinPaletteSidebar',
-      new CatppuccinSidebarProvider(context)
+      new CatppuccinPalettePickerSidebarProvider(context)
     ),
 
 
-    vscode.commands.registerCommand('catppuccinPalette.openCatppuccinPalette', () => {
+    vscode.commands.registerCommand('catppuccinPalette.openCatppuccinPalettePicker', () => {
       const columnToShowIn = vscode.window.activeTextEditor
         ? vscode.window.activeTextEditor.viewColumn
         : undefined;
@@ -30,9 +30,9 @@ export function activate(context: vscode.ExtensionContext) {
       } else {
         // Create and show a new webview
         panel = vscode.window.createWebviewPanel(
-          'catppuccinPalette', // Identifies the type of the webview. Used internally
-          'Catppuccin Palette', // Title of the panel displayed to the user
-          columnToShowIn || vscode.ViewColumn.One, // Editor column to show the new webview panel in.
+          'catppuccinPalettePicker', // Identifies the type of the webview. Used internally
+          'Catppuccin Palette Picker', // Title of the panel displayed to the user
+          columnToShowIn || vscode.ViewColumn.One,
           {} // Webview options. More on these later.
         );
 
@@ -54,18 +54,13 @@ export function activate(context: vscode.ExtensionContext) {
 
   );
 
-
-  // Use the console to output diagnostic information (console.log) and errors (console.error)
-  // This line of code will only be executed once when your extension is activated
-  console.log('Congratulations, your extension "catppuccinPalette" is now active!');
-
   // The command has been defined in the package.json file
   // Now provide the implementation of the command with registerCommand
   // The commandId parameter must match the command field in package.json
-  const disposable = vscode.commands.registerCommand('catppuccinPalette.activateCatppuccinPalette', () => {
+  const disposable = vscode.commands.registerCommand('catppuccinPalette.activateCatppuccinPalettePicker', () => {
     // The code you place here will be executed every time your command is executed
     // Display a message box to the user
-    vscode.window.showInformationMessage('Hi from Catppuccin Palette!');
+    vscode.window.showInformationMessage('Hi from Catppuccin Palette Picker!');
   });
 
   context.subscriptions.push(disposable);
@@ -85,7 +80,7 @@ function getWebviewContent() {
 </html>`;
 }
 
-class CatppuccinSidebarProvider implements vscode.WebviewViewProvider {
+class CatppuccinPalettePickerSidebarProvider implements vscode.WebviewViewProvider {
   constructor(private readonly context: vscode.ExtensionContext) {}
 
   resolveWebviewView(

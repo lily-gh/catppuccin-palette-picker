@@ -18,7 +18,7 @@
       "activitybar": [
         {
           "id": "catppuccinPaletteSidebar-view",
-          "title": "Catppuccin Palette",
+          "title": "Catppuccin Palette Picker",
           "icon": "media/icon3.png"
         }
       ]
@@ -28,20 +28,20 @@
         {
           "type": "webview",
           "id": "catppuccinPaletteSidebar",
-          "name": "Catppuccin Palette",
+          "name": "Catppuccin Palette Picker",
           "icon": "media/icon3.png",
-          "contextualTitle": "Catppuccin Palette 🎨"
+          "contextualTitle": "Catppuccin Palette Picker 🎨"
         }
       ]
     },
     "commands": [
       {
-        "command": "catppuccinPalette.activateCatppuccinPalette",
-        "title": "Catppuccin Palette"
+        "command": "catppuccinPalette.activateCatppuccinPalettePicker",
+        "title": "Catppuccin Palette Picker"
       },
       {
-        "command": "catppuccinPalette.openCatppuccinPalette",
-        "title": "Catppuccin Palette - open"
+        "command": "catppuccinPalette.openCatppuccinPalettePicker",
+        "title": "Catppuccin Palette Picker - open"
       }
     ]
   },
