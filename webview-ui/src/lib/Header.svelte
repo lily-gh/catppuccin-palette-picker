@@ -5,6 +5,11 @@
         flavor: Flavor;
         format: Format;
     }>();
+
+    // Debug log to track flavor changes in Header
+    $effect(() => {
+        console.log('Header: flavor changed to:', flavor);
+    });
 </script>
 
 <div class="flex gap-2">

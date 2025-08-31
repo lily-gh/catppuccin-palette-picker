@@ -9,6 +9,14 @@
 
   // --- derived ---
   let currentPalette = $derived(catppuccinColors[selectedFlavor]);
+  let currentColors = $derived(currentPalette.colors);
+
+  // Debug log to track flavor changes
+  $effect(() => {
+    console.log('Selected flavor changed to:', selectedFlavor);
+    console.log('Current palette:', currentPalette);
+    console.log('Current colors:', currentColors);
+  });
 
   // --- methods ---
   function handleCopy(name: string, value: string) {
@@ -68,7 +76,7 @@
     bind:format={selectedFormat}
   />
   <PaletteList
-    colors={currentPalette.colors}
+    colors={currentColors}
     format={selectedFormat}
     onCopy={handleCopy}
   />
