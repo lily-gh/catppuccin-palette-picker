@@ -6,6 +6,7 @@
   // --- state ---
   let selectedFlavor: Flavor = $state('mocha');
   let selectedFormat: Format = $state('hex');
+  let favorites: Set<string> = $state(new Set());
 
   // --- derived ---
   let currentPalette = $derived(catppuccinColors[selectedFlavor]);
@@ -64,6 +65,16 @@
       document.body.removeChild(textArea);
     }
   }
+
+  function handleToggleFavorite(name: string) {
+    const newFavorites = new Set(favorites);
+    if (newFavorites.has(name)) {
+      newFavorites.delete(name);
+    } else {
+      newFavorites.add(name);
+    }
+    favorites = newFavorites;
+  }
 </script>
 
 <main class="flex flex-col gap-3 p-3 text-sm font-sans 
@@ -78,6 +89,8 @@
     colors={currentColors}
     format={selectedFormat}
     onCopy={handleCopy}
+    {favorites}
+    onToggleFavorite={handleToggleFavorite}
   />
 </main>
 
