@@ -16,7 +16,7 @@
     onclick={() => onCopy(name, value)}
     aria-label="Copy color value"
 >
-    <div class="w-4 h-4 rounded" style="background-color: {colorForBackground}"></div>
+    <div class="w-8 h-8 rounded" style="background-color: {colorForBackground}"></div>
     <div class="flex flex-col">
         <span class="text-xs font-medium">{name}</span>
         <span class="text-xs opacity-70">{value}</span>
