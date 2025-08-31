@@ -10,7 +10,10 @@
 <div class="flex flex-col gap-2">
     <select
         bind:value={flavor}
-        class="w-full bg-transparent border p-1 rounded"
+        class="w-full p-1 rounded border"
+        style="background-color: var(--vscode-input-background); 
+               color: var(--vscode-input-foreground);
+               border-color: var(--vscode-input-border, var(--vscode-contrastBorder));"
     >
         {#each Object.entries(catppuccinColors) as [key, flavorData]}
             <option value={key}>{flavorData.name}</option>
@@ -19,7 +22,10 @@
 
     <select
         bind:value={format}
-        class="w-full bg-transparent border p-1 rounded"
+        class="w-full p-1 rounded border"
+        style="background-color: var(--vscode-input-background); 
+               color: var(--vscode-input-foreground);
+               border-color: var(--vscode-input-border, var(--vscode-contrastBorder));"
     >
         <option value="hex">HEX</option>
         <option value="rgb">RGB</option>
