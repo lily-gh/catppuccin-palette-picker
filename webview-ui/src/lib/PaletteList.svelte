@@ -8,9 +8,10 @@
         onCopy: (name: string, value: string) => void;
     }>();
 
-    // Debug log to track colors prop changes
+    // Debug logging
     $effect(() => {
-        console.log('PaletteList: colors prop changed, first color:', Object.values(colors)[0]);
+        console.log('PaletteList: colors changed, first color name:', Object.keys(colors)[0]);
+        console.log('PaletteList: first color hex:', Object.values(colors)[0]?.hex);
     });
 
     // Create a unique identifier that changes when colors change

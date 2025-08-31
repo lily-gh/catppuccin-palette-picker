@@ -1,12 +1,9 @@
 <script lang="ts">
     import { catppuccinColors, type Flavor, type Format } from "./colors";
 
-    let { flavor = $bindable(), format = $bindable() } = $props<{
-        flavor: Flavor;
-        format: Format;
-    }>();
+    let { flavor = $bindable(), format = $bindable() } = $props();
 
-    // Debug log to track flavor changes in Header
+    // Debug logging
     $effect(() => {
         console.log('Header: flavor changed to:', flavor);
     });

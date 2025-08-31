@@ -1,6 +1,7 @@
 <script lang="ts">
   import Header from './lib/Header.svelte';
   import PaletteList from './lib/PaletteList.svelte';
+  import TestParent from './lib/TestParent.svelte';
   import { catppuccinColors, type Flavor, type Format } from './lib/colors';
 
   // --- state ---
@@ -11,11 +12,10 @@
   let currentPalette = $derived(catppuccinColors[selectedFlavor]);
   let currentColors = $derived(currentPalette.colors);
 
-  // Debug log to track flavor changes
+  // Debug logging
   $effect(() => {
-    console.log('Selected flavor changed to:', selectedFlavor);
-    console.log('Current palette:', currentPalette);
-    console.log('Current colors:', currentColors);
+    console.log('App: selectedFlavor changed to:', selectedFlavor);
+    console.log('App: currentPalette is:', currentPalette.name);
   });
 
   // --- methods ---
@@ -71,6 +71,7 @@
             text-[var(--vscode-editor-foreground)] 
             bg-[var(--vscode-sideBar-background)] 
             w-full h-full min-h-screen overflow-hidden">
+  <TestParent />
   <Header
     bind:flavor={selectedFlavor}
     bind:format={selectedFormat}
