@@ -15,7 +15,10 @@
         class="flex-1 p-1 rounded border"
         style="background-color: var(--vscode-input-background); 
             color: var(--vscode-input-foreground);
-            border-color: var(--vscode-input-border, var(--vscode-contrastBorder));"
+            border-color: var(--vscode-input-border, var(--vscode-contrastBorder));
+            outline: none;"
+        onfocus={(e) => (e.target as HTMLSelectElement).style.borderColor = 'var(--vscode-focusBorder, var(--vscode-input-border, var(--vscode-contrastBorder)))'}
+        onblur={(e) => (e.target as HTMLSelectElement).style.borderColor = 'var(--vscode-input-border, var(--vscode-contrastBorder))'}
     >
         {#each Object.entries(catppuccinColors) as [key, flavorData]}
             <option value={key}>{flavorData.name}</option>
@@ -27,7 +30,10 @@
         class="w-16 p-1 rounded border"
         style="background-color: var(--vscode-input-background); 
             color: var(--vscode-input-foreground);
-            border-color: var(--vscode-input-border, var(--vscode-contrastBorder));"
+            border-color: var(--vscode-input-border, var(--vscode-contrastBorder));
+            outline: none;"
+        onfocus={(e) => (e.target as HTMLSelectElement).style.borderColor = 'var(--vscode-focusBorder, var(--vscode-input-border, var(--vscode-contrastBorder)))'}
+        onblur={(e) => (e.target as HTMLSelectElement).style.borderColor = 'var(--vscode-input-border, var(--vscode-contrastBorder))'}
     >
         <option value="hex">HEX</option>
         <option value="rgb">RGB</option>
