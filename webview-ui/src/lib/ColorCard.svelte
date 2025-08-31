@@ -7,7 +7,7 @@
     }>();
 
     // Use backgroundColor for the color swatch, fallback to value if not provided
-    const colorForBackground = backgroundColor || value;
+    const colorForBackground = $derived(backgroundColor || value);
 </script>
 
 <button

@@ -1,7 +1,6 @@
 <script lang="ts">
   import Header from './lib/Header.svelte';
   import PaletteList from './lib/PaletteList.svelte';
-  import TestParent from './lib/TestParent.svelte';
   import { catppuccinColors, type Flavor, type Format } from './lib/colors';
 
   // --- state ---
@@ -71,7 +70,6 @@
             text-[var(--vscode-editor-foreground)] 
             bg-[var(--vscode-sideBar-background)] 
             w-full h-full min-h-screen overflow-hidden">
-  <TestParent />
   <Header
     bind:flavor={selectedFlavor}
     bind:format={selectedFormat}

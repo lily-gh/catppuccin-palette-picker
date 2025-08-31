@@ -7,19 +7,10 @@
         format: Format;
         onCopy: (name: string, value: string) => void;
     }>();
-
-    // Debug logging
-    $effect(() => {
-        console.log('PaletteList: colors changed, first color name:', Object.keys(colors)[0]);
-        console.log('PaletteList: first color hex:', Object.values(colors)[0]?.hex);
-    });
-
-    // Create a unique identifier that changes when colors change
-    const colorsKey = $derived(JSON.stringify(Object.values(colors).slice(0, 3).map(c => (c as ColorValue).hex)));
 </script>
 
 <div class="flex flex-col gap-2 overflow-auto max-h-[calc(100vh-120px)] pr-1">
-    {#each Object.entries(colors) as [name, colorValue] (name)}
+    {#each Object.entries(colors) as [name, colorValue] (`${name}-${(colorValue as ColorValue).hex}`)}
         <ColorCard 
             {name} 
             value={getColorValue(colorValue as ColorValue, format)}
