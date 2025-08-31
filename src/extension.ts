@@ -113,8 +113,11 @@ class CatppuccinPalettePickerSidebarProvider implements vscode.WebviewViewProvid
 
     webviewView.webview.onDidReceiveMessage(async (msg) => {
       if (msg.command === 'copy') {
-        await vscode.env.clipboard.writeText(msg.text);
-        vscode.window.showInformationMessage(`Copied: ${msg.text}`);
+        // Copy to clipboard using VS Code's clipboard API (this is more reliable in the extension context)
+        await vscode.env.clipboard.writeText(msg.value);
+        
+        // Show toast message with format: "<colorname> <color code> copied to clipboard."
+        vscode.window.showInformationMessage(`${msg.name} ${msg.value} copied to clipboard.`);
       }
     });
   }

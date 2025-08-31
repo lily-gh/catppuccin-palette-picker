@@ -5,7 +5,7 @@
     let { colors, format, onCopy } = $props<{
         colors: Record<string, ColorValue>;
         format: Format;
-        onCopy: (text: string) => void;
+        onCopy: (name: string, value: string) => void;
     }>();
 </script>
 

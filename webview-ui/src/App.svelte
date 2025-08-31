@@ -11,9 +11,51 @@
   let currentPalette = $derived(catppuccinColors[selectedFlavor]);
 
   // --- methods ---
-  function handleCopy(text: string) {
-    console.log("Copying to clipboard:", text);
-    (window as any).vscode?.postMessage({ command: 'copy', text });
+  function handleCopy(name: string, value: string) {
+    // Copy to clipboard
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(value).then(() => {
+        // Post message to VS Code extension
+        if (window.vscode) {
+          window.vscode.postMessage({
+            command: 'copy',
+            name: name,
+            value: value
+          });
+        }
+      }).catch((err) => {
+        console.error('Failed to copy to clipboard:', err);
+        // Fallback: still try to show VS Code toast even if clipboard fails
+        if (window.vscode) {
+          window.vscode.postMessage({
+            command: 'copy',
+            name: name,
+            value: value
+          });
+        }
+      });
+    } else {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = value;
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        // Post message to VS Code extension
+        if (window.vscode) {
+          window.vscode.postMessage({
+            command: 'copy',
+            name: name,
+            value: value
+          });
+        }
+      } catch (err) {
+        console.error('Fallback copy failed:', err);
+      }
+      document.body.removeChild(textArea);
+    }
   }
 </script>
 
