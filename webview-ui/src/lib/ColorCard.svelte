@@ -70,9 +70,12 @@
         aria-label="Copy color value"
     >
         <div class="w-8 h-8 rounded" style="background-color: {colorForBackground}"></div>
-        <div class="flex flex-col flex-1">
-            <span class="text-xs font-medium">{name}</span>
-            <span class="text-xs opacity-70">{value}</span>
+        <div class="flex flex-col flex-1 relative">
+            <!-- Text content - hidden during animation -->
+            <div class="transition-opacity duration-200" class:opacity-0={isAnimating}>
+                <span class="text-xs font-medium">{name}</span> <br />
+                <span class="text-xs opacity-70">{value}</span>
+            </div>
         </div>
         
         <!-- Copy feedback overlay -->
