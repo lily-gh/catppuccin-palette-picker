@@ -23,9 +23,10 @@
         // Start the animation
         isAnimating = true;
         
-        // Create ripple effect
+        // Create ripple effect - target the outer container instead of just the button
         const button = event.currentTarget as HTMLElement;
-        const rect = button.getBoundingClientRect();
+        const container = button.closest('.group') as HTMLElement;
+        const rect = container.getBoundingClientRect();
         const size = Math.max(rect.width, rect.height);
         const x = event.clientX - rect.left - size / 2;
         const y = event.clientY - rect.top - size / 2;
@@ -36,7 +37,7 @@
         ripple.style.top = y + 'px';
         ripple.classList.add('ripple');
         
-        button.appendChild(ripple);
+        container.appendChild(ripple);
         rippleElements.push(ripple);
         
         // Call the copy function
@@ -61,15 +62,15 @@
 </script>
 
 <div
-    class="flex items-center gap-2 p-2 rounded hover:bg-[var(--vscode-list-hoverBackground)] group"
+    class="flex items-center gap-2 p-4 rounded hover:bg-[var(--vscode-list-hoverBackground)] group relative overflow-hidden min-h-[3rem]"
 >
     <button
         type="button"
-        class="flex items-center gap-2 flex-1 cursor-pointer relative overflow-hidden"
+        class="flex items-center gap-2 flex-1 cursor-pointer w-full"
         onclick={handleCopyClick}
         aria-label="Copy color value"
     >
-        <div class="w-8 h-8 rounded" style="background-color: {colorForBackground}"></div>
+        <div class="w-8 h-8 rounded-md" style="background-color: {colorForBackground}"></div>
         <div class="flex flex-col flex-1 relative">
             <!-- Text content - hidden during animation -->
             <div class="transition-opacity duration-200" class:opacity-0={isAnimating}>
@@ -77,24 +78,25 @@
                 <span class="text-xs opacity-70">{value}</span>
             </div>
         </div>
-        
-        <!-- Copy feedback overlay -->
-        {#if isAnimating}
-            <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-200">
-                <div class="flex items-center gap-2">
-                    <!-- Copy icon -->
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vscode-foreground)" stroke-width="2" class="opacity-80">
-                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-                    </svg>
-                    <!-- Checkmark icon -->
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vscode-charts-green)" stroke-width="2" class="opacity-90">
-                        <polyline points="20,6 9,17 4,12"/>
-                    </svg>
-                </div>
-            </div>
-        {/if}
     </button>
+    
+    <!-- Copy feedback overlay -->
+    {#if isAnimating}
+        <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-200 pointer-events-none">
+            <div class="flex items-center gap-2">
+                <!-- Copy icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vscode-foreground)" stroke-width="2" class="opacity-80">
+                    <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                    <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                </svg>
+                <!-- Checkmark icon -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--vscode-charts-green)" stroke-width="2" class="opacity-90">
+                    <polyline points="20,6 9,17 4,12"/>
+                </svg>
+            </div>
+        </div>
+    {/if}
+    
     {#if onToggleFavorite}
         <button
             type="button"
