@@ -39,8 +39,6 @@ export function activate(context: vscode.ExtensionContext) {
         // And set its HTML content
         panel.webview.html = getWebviewContent();
 
-
-
         panel.onDidDispose(
           () => {
             // When the panel is closed, cancel any future updates to the webview content
