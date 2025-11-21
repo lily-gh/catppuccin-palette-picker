@@ -1,8 +1,8 @@
 {
   "name": "catppuccin-palette",
-  "displayName": "Catppuccin Palette",
-  "description": "Easily copy Catppuccin Palette color codes to speed up your UI design.",
-  "version": "0.0.1",
+  "displayName": "Catppuccin Palette Picker",
+  "description": "Easily copy Catppuccin Palette color codes to style other tools and apps using VS Code.",
+  "version": "0.1.0",
   "engines": {
     "vscode": "^1.102.0"
   },
@@ -38,15 +38,11 @@
       {
         "command": "catppuccinPalette.activateCatppuccinPalettePicker",
         "title": "Catppuccin Palette Picker"
-      },
-      {
-        "command": "catppuccinPalette.openCatppuccinPalettePicker",
-        "title": "Catppuccin Palette Picker - open"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run compile && npm run build",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
