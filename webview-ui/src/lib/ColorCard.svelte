@@ -62,7 +62,7 @@
 </script>
 
 <div
-    class="flex items-center gap-2 p-4 rounded hover:bg-[var(--vscode-list-hoverBackground)] group relative overflow-hidden min-h-[3rem]"
+    class="flex items-center gap-2 p-2 rounded hover:bg-[var(--vscode-list-hoverBackground)] group relative overflow-hidden"
 >
     <button
         type="button"
@@ -70,7 +70,7 @@
         onclick={handleCopyClick}
         aria-label="Copy color value"
     >
-        <div class="w-8 h-8 rounded-md" style="background-color: {colorForBackground}"></div>
+        <div class="w-6 h-6 rounded-md" style="background-color: {colorForBackground}"></div>
         <div class="flex flex-col flex-1 relative">
             <!-- Text content - hidden during animation -->
             <div class="transition-opacity duration-200" class:opacity-0={isAnimating}>
