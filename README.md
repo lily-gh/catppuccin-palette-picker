@@ -1,71 +1,35 @@
-# catppuccin-palette README
-
-This is the README for your extension "catppuccin-palette". After writing up a brief description, we recommend including the following sections.
+# Catppuccin Palette Picker 🎨
+A VS Code extension that provides easy access to the beautiful [Catppuccin](https://github.com/catppuccin/catppuccin) color palette directly within your editor. Quickly reference and copy color codes in multiple formats without leaving your workflow.
 
 ## Features
+- 🎨 **All Four Catppuccin Flavors**: Latte, Frappé, Macchiato, and Mocha
+- 📋 **Multiple Color Formats**: HEX, RGB, and HSL
+- 🖱️ **One-Click Copy**: Click any color card to copy the color code to your clipboard
+- 🔍 **Visual Color Preview**: See all colors with their names and values at a glance
+- 📍 **Sidebar Integration**: Access colors from a convenient sidebar view in your activity bar
+- ❤️ **Favorite Colors**: Mark your frequently used colors as favorites for quick access at the top of the list
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
+### Opening the Catppuccin Palette Picker
+The Catppuccin Palette Picker appears as a sidebar in your activity bar. You can access it by:
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Clicking the Extension icon in the activity bar
+2. Running the command `Catppuccin Palette Picker` from the Command Palette (Ctrl+Shift+P / Cmd+Shift+P)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
+### Selecting Flavors and Formats
+- Use the flavor dropdown to switch between Latte, Frappé, Macchiato, and Mocha.
+- Use the format dropdown to choose between HEX, RGB, or HSL color codes.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
+### ❤️ Favorites
+Click the heart icon on any color card to mark it as a favorite. Favorited colors appear at the top of the palette for quick access.
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.png"/>
+</p>
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+<p align="center">
+    Extension by <a href="https://github.com/lily-gh" target="_blank">Lily</a> 💖
+</p>

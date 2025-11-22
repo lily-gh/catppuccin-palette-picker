@@ -1,17 +1,28 @@
 {
-  "name": "catppuccin-palette",
+  "publisher": "LilyOliveira",
+  "name": "catppuccin-palette-picker",
   "displayName": "Catppuccin Palette Picker",
-  "description": "Easily copy Catppuccin Palette color codes to style other tools and apps using VS Code.",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Easily reference and copy Catppuccin Palette color codes directly inside VS Code.",
+  "author": "Lily Oliveira",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.102.0"
   },
+  "keywords": [
+    "catppuccin",
+    "color picker",
+    "palette",
+    "colors",
+    "color-picker",
+    "pastel-colors"
+  ],
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onView:catppuccinPaletteSidebar"
-  ],
+  "sponsor": {
+    "url": "https://ko-fi.com/lily_neinhorn"
+  },
   "main": "./out/extension.js",
   "contributes": {
     "viewsContainers": {
@@ -19,7 +30,7 @@
         {
           "id": "catppuccinPaletteSidebar-view",
           "title": "Catppuccin Palette Picker",
-          "icon": "media/icon3.png"
+          "icon": "media/icon.png"
         }
       ]
     },
@@ -29,7 +40,7 @@
           "type": "webview",
           "id": "catppuccinPaletteSidebar",
           "name": "Catppuccin Palette Picker",
-          "icon": "media/icon3.png",
+          "icon": "media/icon.png",
           "contextualTitle": "Catppuccin Palette Picker 🎨"
         }
       ]
