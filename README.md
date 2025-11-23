@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/lily-gh/catppuccin-palette-picker/main/logo.png" width="160" alt="Catppuccin Palette Picker Logo"/><br/>
+  <img src="logo.png" width="160" alt="Catppuccin Palette Picker Logo"/><br/>
  Catppuccin Palette Picker
 </h1>
 

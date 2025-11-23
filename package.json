@@ -6,6 +6,10 @@
   "description": "Easily reference and copy Catppuccin Palette color codes directly inside VS Code.",
   "author": "Lily Oliveira",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lily-gh/catppuccin-palette-picker"
+  },
   "engines": {
     "vscode": "^1.102.0"
   },
