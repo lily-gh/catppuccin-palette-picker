@@ -15,6 +15,14 @@
     <a href="https://github.com/lily-gh/catppuccin-palette-picker/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
 </p>
  
+
+## Preview
+<p align="center">
+  <video src="preview.mp4" width="800" autoplay loop muted controls>
+  </video>
+</p>
+
+
 ## Features
 - 🎨 **All Four Catppuccin Flavors**: Latte, Frappé, Macchiato, and Mocha
 - 📋 **Multiple Color Formats**: HEX, RGB, and HSL
