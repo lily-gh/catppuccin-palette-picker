@@ -9,3 +9,7 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+webview-ui/node_modules/**
+webview-ui/src/**
+webview-ui/public/**
+preview.gif
