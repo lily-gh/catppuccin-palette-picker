@@ -18,8 +18,7 @@
 
 ## Preview
 <p align="center">
-  <video src="preview.mp4" width="800" autoplay loop muted controls>
-  </video>
+  <img src="preview.gif" alt="Preview" width="800" />
 </p>
 
 
