@@ -1,6 +1,20 @@
-# Catppuccin Palette Picker 🎨
-A VS Code extension that provides easy access to the beautiful [Catppuccin](https://github.com/catppuccin/catppuccin) color palette directly within your editor. Quickly reference and copy color codes in multiple formats without leaving your workflow.
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/lily-gh/catppuccin-palette-picker/main/logo.png" width="160" alt="Catppuccin Palette Picker Logo"/><br/>
+ Catppuccin Palette Picker
+</h1>
 
+<p align="center">
+  An extension that provides easy access to the beautiful <a href="https://github.com/catppuccin/palette" target="_blank"> Catppuccin Color Palette</a> directly within your editor. Quickly reference and copy color codes in multiple formats without leaving your workflow.
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="400" />
+</p>
+
+<p align="center">
+    <a href="https://github.com/lily-gh/catppuccin-palette-picker/blob/main/LICENSE"><img src="https://img.shields.io/static/v1.svg?style=for-the-badge&label=License&message=MIT&logoColor=d9e0ee&colorA=363a4f&colorB=b7bdf8"/></a>
+</p>
+ 
 ## Features
 - 🎨 **All Four Catppuccin Flavors**: Latte, Frappé, Macchiato, and Mocha
 - 📋 **Multiple Color Formats**: HEX, RGB, and HSL
@@ -31,5 +45,5 @@ Click the heart icon on any color card to mark it as a favorite. Favorited color
 </p>
 
 <p align="center">
-    Extension by <a href="https://github.com/lily-gh" target="_blank">Lily</a> 💖
+    Extension made by <a href="https://github.com/lily-gh" target="_blank">Lily</a> 💖
 </p>
