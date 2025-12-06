@@ -4,7 +4,8 @@
 </h1>
 
 <p align="center">
-  An extension that provides easy access to the beautiful <a href="https://github.com/catppuccin/palette" target="_blank"> Catppuccin Color Palette</a> directly within your editor. Quickly reference and copy color codes in multiple formats without leaving your workflow.
+  An extension that provides easy access to the beautiful <a href="https://github.com/catppuccin/palette" target="_blank"> Catppuccin Color Palette</a> directly within your editor. Quickly reference and copy color codes in multiple formats without leaving your workflow. 
+  Also available for <a href="https://open-vsx.org/extension/LilyOliveira/catppuccin-palette-picker">VSCodium</a>.
 </p>
 
 <p align="center">
